@@ -476,7 +476,7 @@ func nativePlanForTest(t *testing.T) sandboxPlan {
 			Command: []string{"{{self}}", "sandbox", "run", "--profile", "default", "--", "x"},
 		}},
 	}}
-	plan, err := resolveSandboxPlan(lc, "")
+	plan, err := resolveSandboxPlan(lc)
 	if err != nil {
 		t.Fatalf("resolveSandboxPlan: %v", err)
 	}
